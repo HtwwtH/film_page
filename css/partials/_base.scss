@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: $color-base;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+  color: $color-light;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 6px;
+}
