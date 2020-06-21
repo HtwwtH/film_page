@@ -43,28 +43,28 @@
       margin-right: 18px;
     }
   }
+}
 
-  .button-group {
+.button-group {
+  height: 100%;
+  .button {
     height: 100%;
-    .button {
-      height: 100%;
-      cursor: pointer;
-      font-size: 18px;
-      line-height: 21px;
-    }
-    .sign-up {
-      color: #5671f6;
-      border: none;
-      background-color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .sign-up {
+    color: #5671f6;
+    border: none;
+    background-color: #fff;
 
-      padding: 0 34px;
-      border-left: 1px solid $color-line;
-    }
-    .login {
-      color: #fff;
-      border: none;
-      background-color: #5671f6;
-      padding: 0 50px;
-    }
+    padding: 0 34px;
+    border-left: 1px solid $color-line;
+  }
+  .login {
+    color: #fff;
+    border: none;
+    background-color: #5671f6;
+    padding: 0 50px;
   }
 }
