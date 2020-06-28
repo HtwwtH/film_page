@@ -68,3 +68,16 @@
     padding: 0 50px;
   }
 }
+.mobile-buttons {
+  display: none;
+}
+.m-menu-button,
+.search-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.menu-icon {
+  color: #000;
+  font-size: 20px;
+}

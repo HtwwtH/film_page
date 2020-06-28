@@ -29,30 +29,31 @@ p.film-description {
   display: flex;
   flex-direction: column;
   margin-right: 60px;
-  .poster {
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    width: 358px;
+}
+
+.poster {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 358px;
+}
+
+.trailer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 0px 0px 5px 5px;
+  padding: 25px 0;
+  cursor: pointer;
+
+  .trailer-button-icon {
+    margin-right: 14px;
   }
-
-  .trailer-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border: 1px solid #d4d4d4;
-    border-radius: 0px 0px 5px 5px;
-    padding: 25px 0;
-    cursor: pointer;
-
-    .trailer-button-icon {
-      margin-right: 14px;
-    }
-    .trailer-button-text {
-      font-size: 16px;
-      line-height: 19px;
-      color: #5671f6;
-    }
+  .trailer-button-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #5671f6;
   }
 }
 
