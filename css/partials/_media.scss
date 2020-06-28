@@ -7,24 +7,24 @@
     .line {
       margin-left: 16px;
     }
-    .search-input {
-      padding-left: 24px;
-      margin-left: 16px;
-      font-size: 16px;
-    }
-    .navigation {
-      margin-right: 20px;
-      font-size: 16px;
-    }
+  }
+  .search-input {
+    padding-left: 24px;
+    margin-left: 16px;
+    font-size: 16px;
+  }
+  .navigation {
+    margin-right: 20px;
+    font-size: 16px;
   }
   .button-group {
     display: flex;
-    .sign-up {
-      padding: 0 10px;
-    }
-    .login {
-      padding: 0 20px;
-    }
+  }
+  .sign-up {
+    padding: 0 10px;
+  }
+  .login {
+    padding: 0 20px;
   }
 
   .card {
@@ -48,13 +48,11 @@
   .search-input {
     margin-right: auto;
   }
-  .button-group {
-    .sign-up {
-      padding: 0 20px;
-    }
-    .login {
-      padding: 0 40px;
-    }
+  .sign-up {
+    padding: 0 20px;
+  }
+  .login {
+    padding: 0 40px;
   }
   .film-title {
     font-size: 24px;
@@ -103,6 +101,61 @@
   .header {
     height: 80px;
   }
+  .m-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    height: calc(100% - 80px);
+    left: 0;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    background: #5671f6;
+  }
+  .m-menu.active {
+    display: flex;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .button-group {
+    height: auto;
+    flex-direction: column;
+  }
+  .search-input {
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-image: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .navigation {
+    .navigation-link {
+      color: #ffffff;
+      margin-right: 0;
+      margin-bottom: 18px;
+    }
+    .navigation-link:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .sign-up {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 30px;
+  }
+
   .film {
     padding: 50px 0;
   }
@@ -113,14 +166,9 @@
     order: -1;
     margin-bottom: 30px;
   }
-  .button-group {
-    display: none;
-  }
-  .search-input {
-    display: none;
-  }
   .mobile-buttons {
     display: block;
+    margin-left: auto;
   }
 }
 

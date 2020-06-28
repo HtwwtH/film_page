@@ -8,6 +8,10 @@ body {
   color: $color-base;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 h1 {
   font-weight: 900;
   font-size: 36px;

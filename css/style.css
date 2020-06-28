@@ -139,6 +139,10 @@ body {
   color: #363636;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 h1 {
   font-weight: 900;
   font-size: 36px;
@@ -173,9 +177,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 104px;
   padding-left: 34px;
   border-bottom: 1px solid #d4d4d4;
@@ -188,7 +189,24 @@ p {
   margin-left: 34px;
 }
 
-.header .search-input {
+.header .logo {
+  width: 68px;
+}
+
+.m-menu {
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.search-input {
   background-image: url(../img/search-icon.svg);
   background-repeat: no-repeat;
   background-position: center left;
@@ -202,18 +220,14 @@ p {
   line-height: 21px;
 }
 
-.header .logo {
-  width: 68px;
-}
-
-.header .navigation {
+.navigation {
   margin-right: 44px;
   margin-left: auto;
   font-size: 18px;
   line-height: 21px;
 }
 
-.header .navigation .navigation-link {
+.navigation .navigation-link {
   text-decoration: none;
   color: #363636;
   margin-right: 18px;
@@ -230,7 +244,7 @@ p {
   line-height: 21px;
 }
 
-.button-group .sign-up {
+.sign-up {
   color: #5671f6;
   border: none;
   background-color: #fff;
@@ -238,7 +252,7 @@ p {
   border-left: 1px solid #d4d4d4;
 }
 
-.button-group .login {
+.login {
   color: #fff;
   border: none;
   background-color: #5671f6;
@@ -322,6 +336,7 @@ p.film-description {
   border-radius: 0px 0px 5px 5px;
   padding: 25px 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .trailer-button .trailer-button-icon {
@@ -519,12 +534,12 @@ p.film-description {
   .header .line {
     margin-left: 16px;
   }
-  .header .search-input {
+  .search-input {
     padding-left: 24px;
     margin-left: 16px;
     font-size: 16px;
   }
-  .header .navigation {
+  .navigation {
     margin-right: 20px;
     font-size: 16px;
   }
@@ -533,10 +548,10 @@ p.film-description {
     display: -ms-flexbox;
     display: flex;
   }
-  .button-group .sign-up {
+  .sign-up {
     padding: 0 10px;
   }
-  .button-group .login {
+  .login {
     padding: 0 20px;
   }
   .card img {
@@ -558,10 +573,10 @@ p.film-description {
   .search-input {
     margin-right: auto;
   }
-  .button-group .sign-up {
+  .sign-up {
     padding: 0 20px;
   }
-  .button-group .login {
+  .login {
     padding: 0 40px;
   }
   .film-title {
@@ -611,6 +626,77 @@ p.film-description {
   .header {
     height: 80px;
   }
+  .m-menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: fixed;
+    height: calc(100% - 80px);
+    left: 0;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    background: #5671f6;
+  }
+  .m-menu.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  .button-group {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search-input {
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-image: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .navigation .navigation-link {
+    color: #ffffff;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  .navigation .navigation-link:last-child {
+    margin-bottom: 0;
+  }
+  .sign-up {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 30px;
+  }
   .film {
     padding: 50px 0;
   }
@@ -624,14 +710,9 @@ p.film-description {
             order: -1;
     margin-bottom: 30px;
   }
-  .button-group {
-    display: none;
-  }
-  .search-input {
-    display: none;
-  }
   .mobile-buttons {
     display: block;
+    margin-left: auto;
   }
 }
 
