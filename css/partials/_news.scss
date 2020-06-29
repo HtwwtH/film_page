@@ -17,6 +17,7 @@
 }
 
 .news-card {
+  height: 172px;
   flex-basis: 23%;
   background-color: #fff;
   padding: 30px;
@@ -33,4 +34,16 @@
   .newstitle {
     font-weight: bold;
   }
+}
+
+.button-next {
+  display: none;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  cursor: pointer;
 }

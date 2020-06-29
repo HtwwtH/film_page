@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
   </head>
   <body>
     <header class="header">
@@ -126,10 +127,10 @@
     <section class="cast">
       <div class="container">
         <div class="tabs">
-          <h2 class="section-title active">Актеры</h2>
-          <h2 class="section-title">Создатели</h2>
+          <h2 class="tab section-title active" data-target="#actors">Актеры</h2>
+          <h2 class="tab section-title" data-target="#creators">Создатели</h2>
         </div>
-        <div class="tabs-content">
+        <div class="tabs-content visible" id="actors">
           <div class="card">
             <img
               src="img/actors/1.jpg"
@@ -228,45 +229,78 @@
           <!-- /.card -->
         </div>
         <!-- /.tabs-content -->
+        <div class="tabs-content" id="creators">
+          <div class="card">
+            <img
+              src="img/actors/9.jpg"
+              alt="Эндрю Гарфилд"
+              class="card-image"
+            />
+            <div class="card-text">
+              <h3 class="h3 name">Дэвид Роберт Митчелл</h3>
+              <span class="en-name">David Robert Mitchell</span>
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.tabs-content -->
       </div>
       <!-- /.container -->
     </section>
     <section class="news">
       <div class="container">
         <h2 class="section-title">Новости по теме</h2>
-        <div class="news-cards">
-          <div class="news-card">
-            <span class="date">16 мая 2018</span>
-            <h3 class="newstitle">
-              «Под Силвер-Лэйк»: Сказки юга для Человека-паука
-            </h3>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="news-card">
+                <span class="date">16 мая 2018</span>
+                <h3 class="newstitle">
+                  «Под Силвер-Лэйк»: Сказки юга для Человека-паука
+                </h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news-card">
+                <span class="date">6 декабря 2018</span>
+                <h3 class="newstitle">
+                  «Дом, который построил Джек»: Архитектура убийства по Ларсу
+                  фон Триеру
+                </h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news-card">
+                <span class="date">1 февраля 2019</span>
+                <h3 class="newstitle">
+                  Премьеры недели: Жизнь Фредди Меркьюри и ужасы семьи Михалкова
+                </h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news-card">
+                <span class="date">16 мая 2020</span>
+                <h3 class="newstitle">
+                  Поднимите веки: 8 фильмов пострашнее «Реинкарнации»
+                </h3>
+              </div>
+            </div>
           </div>
-          <div class="news-card">
-            <span class="date">6 декабря 2018</span>
-            <h3 class="newstitle">
-              «Дом, который построил Джек»: Архитектура убийства по Ларсу фон
-              Триеру
-            </h3>
-          </div>
-          <div class="news-card">
-            <span class="date">1 февраля 2019</span>
-            <h3 class="newstitle">
-              Премьеры недели: Жизнь Фредди Меркьюри и ужасы семьи Михалкова
-            </h3>
-          </div>
-          <div class="news-card">
-            <span class="date">16 мая 2020</span>
-            <h3 class="newstitle">
-              Поднимите веки: 8 фильмов пострашнее «Реинкарнации»
-            </h3>
-          </div>
+          <!-- ./swiper-wrapper -->
+          <button class="button-next">
+            <img src="img/arrow.svg" alt="arrow" />
+          </button>
         </div>
-        <!-- /.news-cards -->
+        <!-- /.swiper-container -->
       </div>
     </section>
     <!-- /.news -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
